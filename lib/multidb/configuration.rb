@@ -46,7 +46,7 @@ module Multidb
           @configuration = Configuration.new(default_adapter, configuration_hash || {})
         end
       end
-      if @configuration
+      if configuration_hash
         Balancer.new(@configuration)
       end
     end
